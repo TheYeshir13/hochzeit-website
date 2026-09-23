@@ -10,37 +10,65 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt</a>
-  <header class="site-header"><div class="container"><p class="brand">Unsere Hochzeit</p><nav aria-label="Hauptnavigation"><ul>
-    <li><a href="../index.html">Start</a></li><li><a href="infos.html">Informationen</a></li><li><a href="anreise.html">Anreise & Unterkunft</a></li><li><a href="rsvp.html" aria-current="page">Rückmeldung</a></li>
-  </ul></nav></div></header>
+  <header class="site-header"><div class="container">
+    <p class="brand">Unsere Hochzeit</p>
+    <nav aria-label="Hauptnavigation"><ul>
+      <li><a href="../index.html">Start</a></li>
+      <li><a href="infos.html">Informationen</a></li>
+      <li><a href="anreise.html">Anreise &amp; Unterkunft</a></li>
+      <li><a href="rsvp.html" aria-current="page">Rückmeldung</a></li>
+    </ul></nav>
+  </div></header>
   <main id="main" class="container">
     <h1>Gebt uns bitte Bescheid</h1>
     <p>Bitte gebt uns bis zum <strong>1. März 2027</strong> Bescheid, ob ihr dabei seid. Ihr könnt die Namen eurer Begleitpersonen selbst eintragen und für jede teilnehmende Person einen Essenswunsch angeben.</p>
-    <div class="notice" id="setup-notice" role="status">Das Online-Formular wird gerade eingerichtet. Bitte sendet noch keine Angaben darüber.</div>
-    <!-- Nach Einrichtung: action auf den tatsächlichen HTTPS-Formularendpunkt setzen und in js/rsvp.js CONFIGURED = true setzen. -->
-    <form id="rsvp-form" action="" method="post" aria-describedby="setup-notice privacy-note">
-      <fieldset><legend>Rückmeldung</legend>
+
+    <form id="rsvp-form" novalidate aria-describedby="privacy-note">
+      <div class="honeypot" aria-hidden="true">
+        <label for="website">Website</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <fieldset>
+        <legend>Rückmeldung</legend>
+
         <label for="contact_name">Dein Name</label>
         <input id="contact_name" name="contact_name" autocomplete="name" maxlength="120" required>
+
         <label for="reply_email">E-Mail für Rückfragen (freiwillig)</label>
         <input id="reply_email" name="reply_email" type="email" autocomplete="email" maxlength="254">
+
         <label for="attending">Kommst du / kommt ihr?</label>
-        <select id="attending" name="attending" required><option value="">Bitte wählen</option><option value="yes">Ja</option><option value="no">Nein</option></select>
+        <select id="attending" name="attending" required>
+          <option value="">Bitte wählen</option>
+          <option value="yes">Ja</option>
+          <option value="no">Nein</option>
+        </select>
       </fieldset>
+
       <div id="attendees-section" hidden>
-        <fieldset><legend>Teilnehmende Personen</legend>
+        <fieldset>
+          <legend>Teilnehmende Personen</legend>
+
           <label for="guest_count">Wie viele Personen kommen insgesamt (dich eingeschlossen)?</label>
           <input id="guest_count" name="guest_count" type="number" min="1" max="10" value="1" disabled>
+
           <p>Du kannst deine Begleitpersonen selbst eintragen. Bitte trage alle Personen namentlich ein, damit wir Essen und Plätze planen können.</p>
           <div id="guest-fields"></div>
         </fieldset>
       </div>
-      <p id="privacy-note">Wir verwenden eure Angaben nur zur Organisation der Feier. Gesundheitsbezogene Angaben sind freiwillig. <a href="datenschutz.html">Hinweise zur Datenverarbeitung</a>.</p>
+
+      <p id="privacy-note">Wir verwenden eure Angaben ausschließlich zur Organisation unserer Hochzeitsfeier. Allergien und Unverträglichkeiten sind freiwillige Angaben. <a href="datenschutz.html">Hinweise zur Datenverarbeitung</a>.</p>
+
       <div id="consent-wrap" hidden>
-        <label class="check"><input id="allergy_consent" name="allergy_consent" type="checkbox" value="yes" disabled> Ich bin damit einverstanden, dass die angegebenen Allergien und Unverträglichkeiten für die Essensplanung verarbeitet und, soweit nötig, an das Catering weitergegeben werden. Für Angaben zu anderen Personen habe ich deren Zustimmung eingeholt beziehungsweise bin für mein Kind sorgeberechtigt.</label>
+        <label class="check">
+          <input id="allergy_consent" name="allergy_consent" type="checkbox" value="yes" disabled>
+          Ich bin damit einverstanden, dass die angegebenen Allergien und Unverträglichkeiten für die Essensplanung verarbeitet und, soweit nötig, an das Catering weitergegeben werden. Für Angaben zu anderen Personen habe ich deren Zustimmung eingeholt beziehungsweise bin für mein Kind sorgeberechtigt.
+        </label>
       </div>
+
       <p id="form-status" role="status" aria-live="polite"></p>
-      <button id="submit-button" type="submit" disabled>Rückmeldung senden</button>
+      <button id="submit-button" type="submit">Rückmeldung senden</button>
     </form>
   </main>
   <footer class="site-footer"><div class="container"><a href="datenschutz.html">Hinweise zu euren Daten</a></div></footer>

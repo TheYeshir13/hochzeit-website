@@ -36,3 +36,20 @@ button:disabled { opacity: .55; cursor: not-allowed; }
 .skip-link:focus { transform: translateY(0); }
 [hidden] { display: none !important; }
 @media (max-width: 38rem) { .site-header .container { display: block; } nav ul { gap: .4rem 1rem; } main { padding-block: 1.5rem 3rem; } }
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-error {
+  color: #8b1e1e;
+  font-weight: 600;
+}
+
+.form-success {
+  color: #176b3a;
+  font-weight: 600;
+}
