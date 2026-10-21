@@ -1,76 +1,50 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Rückmeldung | Unsere Hochzeit</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/rsvp.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Rückmeldung | Unsere Hochzeit</title>
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Zum Inhalt</a>
-  <header class="site-header"><div class="container">
-    <p class="brand">Unsere Hochzeit</p>
-    <nav aria-label="Hauptnavigation"><ul>
-      <li><a href="../index.html">Start</a></li>
-      <li><a href="infos.html">Informationen</a></li>
-      <li><a href="anreise.html">Anreise &amp; Unterkunft</a></li>
-      <li><a href="rsvp.html" aria-current="page">Rückmeldung</a></li>
-    </ul></nav>
-  </div></header>
-  <main id="main" class="container">
-    <h1>Gebt uns bitte Bescheid</h1>
-    <p>Bitte gebt uns bis zum <strong>1. März 2027</strong> Bescheid, ob ihr dabei seid. Ihr könnt die Namen eurer Begleitpersonen selbst eintragen und für jede teilnehmende Person einen Essenswunsch angeben.</p>
-
-    <form id="rsvp-form" novalidate aria-describedby="privacy-note">
-      <div class="honeypot" aria-hidden="true">
-        <label for="website">Website</label>
-        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-      </div>
-
-      <fieldset>
-        <legend>Rückmeldung</legend>
-
-        <label for="contact_name">Dein Name</label>
-        <input id="contact_name" name="contact_name" autocomplete="name" maxlength="120" required>
-
-        <label for="reply_email">E-Mail für Rückfragen (freiwillig)</label>
-        <input id="reply_email" name="reply_email" type="email" autocomplete="email" maxlength="254">
-
-        <label for="attending">Kommst du / kommt ihr?</label>
-        <select id="attending" name="attending" required>
-          <option value="">Bitte wählen</option>
-          <option value="yes">Ja</option>
-          <option value="no">Nein</option>
-        </select>
-      </fieldset>
-
-      <div id="attendees-section" hidden>
-        <fieldset>
-          <legend>Teilnehmende Personen</legend>
-
-          <label for="guest_count">Wie viele Personen kommen insgesamt (dich eingeschlossen)?</label>
-          <input id="guest_count" name="guest_count" type="number" min="1" max="10" value="1" disabled>
-
-          <p>Du kannst deine Begleitpersonen selbst eintragen. Bitte trage alle Personen namentlich ein, damit wir Essen und Plätze planen können.</p>
-          <div id="guest-fields"></div>
-        </fieldset>
-      </div>
-
-      <p id="privacy-note">Wir verwenden eure Angaben ausschließlich zur Organisation unserer Hochzeitsfeier. Allergien und Unverträglichkeiten sind freiwillige Angaben. <a href="datenschutz.html">Hinweise zur Datenverarbeitung</a>.</p>
-
-      <div id="consent-wrap" hidden>
-        <label class="check">
-          <input id="allergy_consent" name="allergy_consent" type="checkbox" value="yes" disabled>
-          Ich bin damit einverstanden, dass die angegebenen Allergien und Unverträglichkeiten für die Essensplanung verarbeitet und, soweit nötig, an das Catering weitergegeben werden. Für Angaben zu anderen Personen habe ich deren Zustimmung eingeholt beziehungsweise bin für mein Kind sorgeberechtigt.
-        </label>
-      </div>
-
-      <p id="form-status" role="status" aria-live="polite"></p>
-      <button id="submit-button" type="submit">Rückmeldung senden</button>
-    </form>
-  </main>
-  <footer class="site-footer"><div class="container"><a href="datenschutz.html">Hinweise zu euren Daten</a></div></footer>
+<a class="skip-link" href="#main">Zum Inhalt</a>
+<header class="site-header"><div class="container"><p class="brand">Unsere Hochzeit</p><nav aria-label="Hauptnavigation"><ul><li><a href="../index.html">Start</a></li><li><a href="infos.html">Informationen</a></li><li><a href="anreise.html">Anreise &amp; Unterkunft</a></li><li><a href="rsvp.html" aria-current="page">Rückmeldung</a></li></ul></nav></div></header>
+<main id="main" class="container">
+<h1>Gebt uns bitte Bescheid</h1>
+<p>Bitte gebt uns bis zum <strong>1. März 2027</strong> Bescheid, ob ihr dabei seid. Ihr könnt eure Begleitpersonen selbst eintragen und für jede teilnehmende Person einen Essenswunsch angeben.</p>
+<p>Bei Allergien oder Unverträglichkeiten kontaktiert uns bitte persönlich unter <a href="mailto:Jonathan.sudermann@mail.de">Jonathan.sudermann@mail.de</a>. Bitte tragt keine Gesundheitsangaben in das Formular ein.</p>
+<section class="card" id="form-loader" aria-labelledby="form-heading">
+<h2 id="form-heading">Online-Rückmeldung</h2>
+<p>Wir verwenden Tally für die Rückmeldung. Erst wenn ihr auf „Formular laden“ klickt, wird eine Verbindung zu Tally hergestellt; dabei werden technische Zugriffsdaten wie eure IP-Adresse an den Dienst übermittelt. Eure Antworten werden bei Tally gespeichert und von uns für die Hochzeitsplanung verwendet. <a href="datenschutz.html">Hinweise zu euren Daten</a>.</p>
+<button type="button" id="load-form" aria-controls="tally-container" aria-expanded="false">Formular laden</button>
+</section>
+<div id="tally-container" hidden></div>
+<p>Falls die eingebettete Ansicht nicht funktioniert: <a href="https://tally.so/r/4a429k" target="_blank" rel="noopener noreferrer">Formular direkt bei Tally öffnen (neuer Tab)</a>.</p>
+<p>Änderungen oder Rückfragen bitte an <a href="mailto:Jonathan.sudermann@mail.de">Jonathan.sudermann@mail.de</a>. Ihr könnt uns auch ohne das Online-Formular antworten.</p>
+</main>
+<footer class="site-footer"><div class="container"><a href="datenschutz.html">Hinweise zu euren Daten</a></div></footer>
+<script>
+(() => {
+  const button = document.getElementById('load-form');
+  const container = document.getElementById('tally-container');
+  button.addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.src = 'https://tally.so/embed/4a429k?alignLeft=1&hideTitle=1&transparentBackground=1';
+    frame.title = 'Rückmeldung zur Hochzeit von Jonathan und Toni';
+    frame.width = '100%';
+    frame.height = '1500';
+    frame.style.border = '0';
+    frame.style.display = 'block';
+    frame.referrerPolicy = 'no-referrer';
+    container.replaceChildren(frame);
+    container.hidden = false;
+    button.setAttribute('aria-expanded', 'true');
+    button.disabled = true;
+    button.textContent = 'Formular geladen';
+    frame.focus();
+  }, { once: true });
+})();
+</script>
 </body>
 </html>
