@@ -1,4 +1,5 @@
-.site-header { border-top: 0; }
+html { scroll-padding-top: 8rem; }
+.site-header { border-top: 0; position: sticky; top: 0; z-index: 20; background: var(--color-surface); box-shadow: 0 2px 8px rgb(23 33 43 / 6%); }
 .site-header .container { padding-block: 1rem; gap: 1rem 2rem; }
 .site-header .brand { color: var(--color-text); font-size: 1.2rem; text-decoration: none; letter-spacing: -.025em; }
 .site-header nav ul { margin: 0; gap: .35rem; }
@@ -12,9 +13,10 @@
 .page-section > h2 { font-size: 1.7rem; line-height: 1.25; }
 .card h3 { margin-top: 0; }
 .site-footer .container { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
-.skip-link { z-index: 10; }
+.skip-link { z-index: 30; }
 a, p, li { overflow-wrap: anywhere; }
 @media (max-width: 38rem) {
+  html { scroll-padding-top: 13rem; }
   .site-header .container { display: grid; gap: .8rem; }
   .site-header nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .4rem; }
   .site-header nav a { background: #eef2f6; }
