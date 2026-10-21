@@ -1,50 +1,5 @@
 <!doctype html>
 <html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="referrer" content="no-referrer">
-<title>Rückmeldung | Unsere Hochzeit</title>
-<link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-<a class="skip-link" href="#main">Zum Inhalt</a>
-<header class="site-header"><div class="container"><p class="brand">Unsere Hochzeit</p><nav aria-label="Hauptnavigation"><ul><li><a href="../index.html">Start</a></li><li><a href="infos.html">Informationen</a></li><li><a href="anreise.html">Anreise &amp; Unterkunft</a></li><li><a href="rsvp.html" aria-current="page">Rückmeldung</a></li></ul></nav></div></header>
-<main id="main" class="container">
-<h1>Gebt uns bitte Bescheid</h1>
-<p>Bitte gebt uns bis zum <strong>1. März 2027</strong> Bescheid, ob ihr dabei seid. Tragt alle teilnehmenden Personen mit ihrem jeweiligen Essenswunsch ein.</p>
-<p>Allergien und Unverträglichkeiten könnt ihr freiwillig angeben. Bitte nennt nur, was für die Bewirtung wichtig ist, und stimmt Angaben zu Begleitpersonen mit ihnen ab.</p>
-<section class="card" id="form-loader" aria-labelledby="form-heading">
-<h2 id="form-heading">Online-Rückmeldung</h2>
-<p>Das Formular wird erst nach Klick geladen. Dabei wird eine Verbindung zu Tally hergestellt. Eure Antworten werden bei Tally gespeichert und zur Hochzeitsplanung an unsere private Notion-Datenbank übertragen. <a href="datenschutz.html">Hinweise zu euren Daten</a>.</p>
-<button type="button" id="load-form" aria-controls="tally-container" aria-expanded="false">Formular laden</button>
-</section>
-<div id="tally-container" hidden></div>
-<p>Falls die eingebettete Ansicht nicht funktioniert: <a href="https://tally.so/r/4a429k" target="_blank" rel="noopener noreferrer">Formular direkt bei Tally öffnen (neuer Tab)</a>.</p>
-<p>Für Rückfragen, Änderungen oder eine Rückmeldung ohne Formular schreibt an <a href="mailto:Jonathan.sudermann@mail.de">Jonathan.sudermann@mail.de</a>.</p>
-</main>
-<footer class="site-footer"><div class="container"><a href="datenschutz.html">Hinweise zu euren Daten</a></div></footer>
-<script>
-(() => {
-  const button = document.getElementById('load-form');
-  const container = document.getElementById('tally-container');
-  button.addEventListener('click', () => {
-    const frame = document.createElement('iframe');
-    frame.src = 'https://tally.so/embed/4a429k?alignLeft=1&hideTitle=1&transparentBackground=1';
-    frame.title = 'Rückmeldung zur Hochzeit von Jonathan und Toni';
-    frame.width = '100%';
-    frame.height = '1500';
-    frame.style.border = '0';
-    frame.style.display = 'block';
-    frame.referrerPolicy = 'no-referrer';
-    container.replaceChildren(frame);
-    container.hidden = false;
-    button.setAttribute('aria-expanded', 'true');
-    button.disabled = true;
-    button.textContent = 'Formular geladen';
-    frame.focus();
-  }, { once: true });
-})();
-</script>
-</body>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0; url=../index.html#rueckmeldung"><title>Rückmeldung | Jonathan &amp; Toni</title><link rel="stylesheet" href="../css/style.css"></head>
+<body><main class="container"><h1>Rückmeldung zur Hochzeit</h1><p>Das Formular findet ihr jetzt auf unserer gemeinsamen Hochzeitsseite.</p><p><a href="../index.html#rueckmeldung">Zur Rückmeldung</a></p></main></body>
 </html>
