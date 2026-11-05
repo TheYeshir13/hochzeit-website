@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" fill="none">
+  <defs>
+    <linearGradient id="water" x1="50" y1="0" x2="360" y2="560" gradientUnits="userSpaceOnUse"><stop stop-color="#c2dce2"/><stop offset=".5" stop-color="#5896ab"/><stop offset="1" stop-color="#c2dce2"/></linearGradient>
+  </defs>
+  <path d="M199 22C302-4 402 89 390 195S352 320 381 410 295 557 190 538 14 450 36 347 4 222 38 129 111 44 199 22Z" fill="url(#water)"/>
+  <g stroke-linecap="round">
+    <path d="M87 130C153 36 338 72 325 185S142 247 132 341 311 457 318 373" stroke="#173e4b" stroke-opacity=".5" stroke-width="13"/>
+    <path d="M65 170C128 67 300 102 284 186S87 262 95 365 288 506 344 420" stroke="#e3eef0" stroke-width="9"/>
+    <path d="M76 230C105 204 193 231 214 178S165 109 141 143 177 206 225 214 349 257 319 309 222 309 239 365" stroke="#c2dce2" stroke-width="16"/>
+    <path d="M53 389C73 468 174 522 245 502M239 53C309 65 363 116 359 173M155 279C197 245 274 251 281 289" stroke="#173e4b" stroke-opacity=".25" stroke-width="7"/>
+  </g>
+  <g transform="translate(292 120) rotate(22)"><path d="M0 39C-31 22-37-6-10-28L0-43 10-28C37-6 31 22 0 39Z" fill="#d78035"/><path d="M0-25V54M0 6-15-8M0 20 16 4" stroke="#985127" stroke-width="2" stroke-linecap="round"/></g>
+  <g transform="translate(112 391) rotate(-36)"><path d="M0 30C-28 13-25-12 0-32 25-12 28 13 0 30Z" fill="#bda44e"/><path d="M0-19V42M0 7-12-5M0 17 12 3" stroke="#786c35" stroke-width="2" stroke-linecap="round"/></g>
+  <g transform="translate(264 440) rotate(48)"><path d="M0 25C-23 9-20-12 0-28 20-12 23 9 0 25Z" fill="#b75a42"/><path d="M0-17V36" stroke="#783d31" stroke-width="2" stroke-linecap="round"/></g>
+</svg>
