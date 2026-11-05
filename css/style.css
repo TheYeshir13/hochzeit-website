@@ -77,7 +77,7 @@ body#start .site-header {
   border-bottom-color: #79a9b8;
 }
 body#start .intro > p:first-child { color: #173e4b; }
-body#start .intro::after { background-image: url('../assets/Otterpaar_malerisch.svg'); }
+body#start .intro::after { background-image: url('../assets/Otter-rund.png'); }
 body#start .card { background: #eff8fb; }
 body#start #feier .card { background: #dceff4; border-color: #79a9b8; }
 body#start #rueckmeldung { background: #c9e5ed; border-color: #79a9b8; }
