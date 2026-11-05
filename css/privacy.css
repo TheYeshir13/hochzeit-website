@@ -1,0 +1,9 @@
+/* Privacy page reuses the site's water theme and navigation. */
+main.container.privacy-content { max-width: 52rem; padding-block: 3rem 5rem; }
+.privacy-heading { margin-bottom: 2rem; }
+.privacy-heading h1 { margin: 0 0 1rem; font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.15; letter-spacing: -.035em; }
+.privacy-content .card h2 { margin-top: 0; font-size: clamp(1.6rem, 3vw, 2rem); line-height: 1.25; }
+.privacy-content .card h3 { margin-top: 1.8rem; }
+.privacy-content [id] { scroll-margin-top: 1rem; }
+@media (max-width: 38rem) { main.container.privacy-content { padding-block: 2rem 3rem; } }
+@media print { main.container.privacy-content { padding-block: 1rem; max-width: none; } }
