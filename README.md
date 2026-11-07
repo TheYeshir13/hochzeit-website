@@ -17,17 +17,19 @@ and deployment muss GitHub Actions ausgewählt sein. `CNAME` enthält die eigene
 - `index.html`: Onepager mit Trauung und Feier, Ablauf, „Für euere Planung“, Anreise
   und Unterkunft, Rückmeldung sowie anschließend dem Kuchen- und Dessertbuffet.
 - `pages/datenschutz.html`: separate Datenschutzhinweise.
-- `pages/infos.html`, `pages/anreise.html`, `pages/rsvp.html`: absichtlich erhaltene
-  Weiterleitungen zu den passenden Onepager-Abschnitten, jeweils mit Ersatzlink.
 - `css/style.css`: Basisgestaltung und wasserblaue Farbflächen.
 - `css/onepager.css`: Onepager-Layout, Navigation, Karten, Bildmotive und responsive Regeln.
 - `css/privacy.css`: ergänzende Gestaltung der Datenschutzseite.
-- `assets/`: Bilder, Blattmotive und Lageplan; enthält derzeit auch frühere Varianten.
-- `js/rsvp.js`: ungenutzter Altbestand des früheren eigenen Rückmeldeformulars;
-  nicht Bestandteil der aktuellen Tally-Lösung und zur Entfernung vorgesehen.
+- `assets/`: Bilder, Blattmotive und Lageplan sowie bewusst erhaltene Originaldateien
+  und frühere Varianten. Alle Assets bleiben vorerst unverändert bestehen.
 
 Das Layout des Paarfotos und der Formular-Ladecode stehen derzeit direkt in `index.html`.
 Die Navigation bleibt bewusst kompakt; zum Buffet führt zusätzlich ein Link im Ablauf.
+
+Die nicht mehr benötigten Weiterleitungsseiten `pages/infos.html`,
+`pages/anreise.html` und `pages/rsvp.html` sowie das alte Rückmeldeskript
+`js/rsvp.js` wurden entfernt. Die alten Unterseitenadressen werden nicht mehr
+unterstützt; verwendet die Abschnittslinks der Hauptseite.
 
 ## Aktuell eingebundene Bilder
 
@@ -37,7 +39,10 @@ Die Navigation bleibt bewusst kompakt; zum Buffet führt zusätzlich ein Link im
 - Die sechs nummerierten Blatt-SVGs werden im CSS referenziert. Der Selektor für
   das fünfte Blatt passt derzeit nicht auf die verschachtelte Rückmeldungsüberschrift.
 - `assets/Otter_isoliert.png` wird zusätzlich als übersteuerte Hintergrunddefinition
-  in `css/onepager.css` referenziert. Vor einer Löschung diese Referenz bereinigen.
+  in `css/onepager.css` referenziert.
+
+Weitere Assets, darunter `assets/water-leaves.svg`, bleiben auch dann erhalten,
+wenn sie derzeit nicht eingebunden sind. Es ist keine Asset-Löschung vorgesehen.
 
 ## Formulare und Daten
 
@@ -87,9 +92,12 @@ eine Internetverbindung.
 
 ## Bereinigung
 
-Nicht allein nach Alter oder Dateiname löschen. HTML-, CSS-, JavaScript- und
-Workflow-Referenzen berücksichtigen. Weiterleitungen bleiben zur Kompatibilität
-erhalten. Ungenutzte Entwurfsvarianten können nach Prüfung entfernt werden;
-Original- und Quelldateien nur nach bewusster Entscheidung. Änderungen sind über
-die Git-Historie nachvollziehbar. Das Löschen einer Datei aus dem aktuellen Stand
-entfernt sie nicht aus früheren Commits.
+Stand der Bereinigung vom 7. November 2026: Das alte Rückmeldeskript und die drei
+nicht mehr benötigten Weiterleitungsseiten wurden entfernt. Alle Dateien unter
+`assets/` bleiben auf ausdrücklichen Wunsch vorerst erhalten, einschließlich
+ungenutzter Entwürfe und Originaldateien. Weitere Asset-Bereinigungen nur nach
+erneuter ausdrücklicher Freigabe vornehmen.
+
+Vor weiteren Löschungen HTML-, CSS-, JavaScript- und Workflow-Referenzen prüfen.
+Änderungen sind über die Git-Historie nachvollziehbar. Das Löschen einer Datei aus
+dem aktuellen Stand entfernt sie nicht aus früheren Commits.
